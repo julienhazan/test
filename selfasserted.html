@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Récupération de compte</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .validation-error {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .help-text {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="intro">
+        <h1 class="h3 mb-3">Récupération de compte</h1>
+        <p class="text-muted">Veuillez entrer votre adresse email pour retrouver votre compte</p>
+    </div>
+
+    <form id="localAccountDiscovery">
+        <div class="form-group">
+            <label for="email" class="form-label">Adresse email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="validation-error"></div>
+            <div class="help-text">
+                Nous vous enverrons un code de vérification à cette adresse
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <button type="button" class="btn btn-outline-secondary" id="cancel">Annuler</button>
+            <button type="submit" class="btn btn-primary">Continuer</button>
+        </div>
+    </form>
+
+    <div class="text-center mt-4">
+        <a href="#" class="text-decoration-none" id="createAccount">Créer un nouveau compte</a>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
