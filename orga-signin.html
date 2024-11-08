@@ -8,13 +8,214 @@
     <meta name="GOOGLEBOT" content="NOARCHIVE">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Reset et styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #fcfbf9;
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container principal */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            gap: 4rem;
+        }
+
+        /* Section images */
+        .images-section {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 1rem;
+        }
+
+        .image-main {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #e5e5e5;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .images-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .image-small {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: #e5e5e5;
+            border-radius: 1rem;
+        }
+
+        /* Section formulaire */
+        .form-section {
+            flex: 0 1 500px;
+            padding: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo-circle {
+            width: 400px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+        }
+
+        .brand-subtitle {
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #1e1e1e;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .tab {
+            padding: 0.5rem 1rem;
+            color: #6b7280;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab.active {
+            color: #1e3a8a;
+            border-bottom-color: #1e3a8a;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .helper-text {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #1e4090;
+        }
+
+        /* Media queries pour le responsive */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .form-section {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .images-bottom {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
-<div id="api"></div>
-</body>
+<div class="container">
+    <div class="images-section">
+        <div>
+            <img alt="" src="https://assets.chateauform.com/pm_8909_50_50764-aq5tvdxsco-16_9_xlarge.jpg" class="image-main" />
+        </div>
+        <div class="images-bottom">
+            <div>
+                <img alt="" src="https://assets.chateauform.com/pm_8909_50_50764-aq5tvdxsco-16_9_xlarge.jpg" class="image-small"/></div>
+            <div>
+                <img alt="" src="https://assets.chateauform.com/pm_8909_50_50764-aq5tvdxsco-16_9_xlarge.jpg" class="image-small" />
+            </div>
+        </div>
+    </div>
 
+    <div class="form-section">
+        <div class="logo">
+            <div class="logo-circle">
+                <img alt="logo" src="https://assets.chateauform.com/pm_8909_55_55411-akun8kc1at.svg" class="logo-circle"/>
+            </div>
+        </div>
+        <h1>Bienvenue sur votre espace organisateur</h1>
+
+        <div class="tabs">
+            <a href="#" class="tab active">Connexion</a>
+            <a href="#" class="tab">Inscription</a>
+        </div>
+
+        <div id="api">
+            <!-- Le contenu sera injecté ici par B2C -->
+            <div class="input-group">
+                <input type="email" placeholder="E-mail professionnel">
+            </div>
+
+            <div class="helper-text">
+                Vous allez recevoir un lien par email qui vous permettra d'accéder à votre espace (pensez à regarder vos SPAMS)
+            </div>
+
+            <button type="submit">Me connecter</button>
+        </div>
+    </div>
+</div>
+</body>
 </html>
