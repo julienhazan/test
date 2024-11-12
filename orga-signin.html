@@ -219,9 +219,21 @@
             }
         }
     </style>
-    <script src="./script.js" defer></script>
     <script>
-        console.log('Hello world');
+        console.log('Custom JS loaded');
+        function assignerClasseSelonPresence()  {
+            console.log('SETTINGS', SETTINGS);
+            let eltClass;
+            if (SETTINGS['api'] === 'SelfAsserted') {
+                eltClass = document.getElementById('signInBtn')
+            } else {
+                eltClass = document.getElementById('signUpBtn');
+            }
+            if (eltClass) {
+                eltClass.classList.add('active');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', assignerClasseSelonPresence);
     </script>
 </head>
 <body>
